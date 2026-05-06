@@ -1,0 +1,92 @@
+/* Make editor truly full width */
+.editor-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 1 !important;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 50;
+}
+
+/* Quill toolbar */
+.custom-quill .ql-toolbar {
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 0;
+  z-index: 10;
+}
+
+/* Quill editor area */
+.custom-quill .ql-container {
+  min-height: 220px;
+  height: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  resize: vertical;
+  border-radius: 0 0 8px 8px;
+  background: #ffffff;
+}
+
+/* Ensure parent containers don't limit width */
+.editor-parent,
+.editor-container,
+.card,
+.form-section {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ========== লিস্ট স্টাইল ফিক্স - পারফেক্ট ========== */
+.custom-quill .ql-editor {
+  padding-left: 1em !important;
+  margin-left: 0 !important;
+  white-space: pre-wrap !important;
+}
+
+/* অর্ডারড লিস্ট (1,2,3) - গ্যাপ আরও কম */
+.custom-quill .ql-editor ol {
+  padding-left: 0 !important; /* 1em থেকে কমিয়ে 0.6em */
+  margin-left: 0 !important;
+  list-style-position: outside !important;
+}
+
+/* আনঅর্ডারড লিস্ট - গ্যাপ আরও কম */
+.custom-quill .ql-editor ul {
+  padding-left: 0 !important; /* 1em থেকে কমিয়ে 0.6em */
+  margin-left: 0 !important;
+  list-style-position: outside !important;
+}
+
+/* লিস্ট আইটেম */
+.custom-quill .ql-editor li {
+  margin-left: 0 !important;
+  padding-left: 0.3em !important; /* নাম্বার আর টেক্সটের মধ্যে সামান্য গ্যাপ */
+  list-style-position: outside !important;
+}
+
+/* লিস্ট আইটেমে ক্লিক/ফোকাস/একটিভ স্টেট - গ্যাপ রিমুভ */
+.custom-quill .ql-editor li:active,
+.custom-quill .ql-editor li:focus,
+.custom-quill .ql-editor li:hover {
+  margin-left: 0 !important;
+  padding-left: 0.3em !important; /* হোভারেও একই থাকবে */
+  outline: none !important;
+}
+
+/* নেস্টেড লিস্ট */
+.custom-quill .ql-editor li > ol,
+.custom-quill .ql-editor li > ul {
+  margin-left: 0.2em !important;
+}
+
+/* Quill ডিফল্ট ওভাররাইড */
+.ql-editor ol,
+.ql-editor ul {
+  padding-left: 0 !important;
+}
