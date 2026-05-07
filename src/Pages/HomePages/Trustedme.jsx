@@ -1,78 +1,78 @@
 import {
-  FaAward,
+  FaBookOpen,
+  FaBuilding,
   FaChartLine,
-  FaClipboardCheck,
-  FaEdit,
+  FaGlobeAsia,
+  FaLayerGroup,
   FaQuestionCircle,
-  FaSearch,
-  FaTrophy
+  FaTasks,
+  FaUniversity,
+  FaUserTie
 } from "react-icons/fa";
 
 const features = [
   {
-    icon: <FaQuestionCircle className="text-[#d49c5b] text-2xl" />,
+    icon: <FaBookOpen className="text-[#d49c5b] text-2xl" />,
     title: "Smart Grammar Practice",
     description:
-      "Practice essential grammar topics like tense, articles, prepositions, and sentence formation with clear and simple guidance.",
+      "Practice important English grammar topics like tense, articles, prepositions, and sentence structure with simple explanations.",
   },
+
   {
-    icon: <FaEdit className="text-[#d49c5b] text-2xl" />,
-    title: "Step-by-Step Learning Path",
+    icon: <FaUserTie className="text-[#d49c5b] text-2xl" />,
+    title: "Professional Lifestyle",
     description:
-      "Follow a structured learning system that improves your English writing, reading, and understanding step by step.",
+      "Develop professional communication skills and improve your English for academic and career success.",
   },
+
   {
-    icon: <FaClipboardCheck className="text-[#d49c5b] text-2xl" />,
-    title: "Instant Feedback System",
+    icon: <FaBuilding className="text-[#d49c5b] text-2xl" />,
+    title: "Corporate Information",
     description:
-      "Get instant corrections and explanations to understand your mistakes and improve faster.",
+      "Learn essential business and corporate communication styles to strengthen your professional English abilities.",
   },
+
   {
-    icon: <FaSearch className="text-[#d49c5b] text-2xl" />,
-    title: "Topic-Based Practice",
+    icon: <FaGlobeAsia className="text-[#d49c5b] text-2xl" />,
+    title: "Global University List",
     description:
-      "Practice vocabulary, idioms, verbs, and grammar topics through organized and focused exercises.",
+      "Explore top universities around the world and prepare yourself for international education opportunities.",
   },
-  {
-    icon: <FaTrophy className="text-[#d49c5b] text-2xl" />,
-    title: "Skill Growth Tracking",
-    description:
-      "Track your learning progress and see your improvement clearly over time.",
-  },
-  {
-    icon: <FaAward className="text-[#d49c5b] text-2xl" />,
-    title: "Structured Learning System",
-    description:
-      "A well-organized system that helps you build strong English skills step by step.",
-  },
+
   {
     icon: <FaChartLine className="text-[#d49c5b] text-2xl" />,
+    title: "Skill Growth Tracking",
+    description:
+      "Track your learning progress and monitor your improvement step by step with organized performance insights.",
+  },
+
+  {
+    icon: <FaLayerGroup className="text-[#d49c5b] text-2xl" />,
+    title: "Structured Learning System",
+    description:
+      "Follow a well-planned learning path designed to build strong English skills gradually and effectively.",
+  },
+
+  {
+    icon: <FaTasks className="text-[#d49c5b] text-2xl" />,
     title: "Progressive Practice",
     description:
-      "Improve continuously with exercises designed to strengthen vocabulary and grammar.",
+      "Improve continuously with structured exercises focused on vocabulary, grammar, reading, and writing skills.",
   },
 
   {
     icon: <FaQuestionCircle className="text-[#d49c5b] text-2xl" />,
     title: "Interactive Quiz Practice",
     description:
-      "Test your English skills through interactive quizzes and real-life usage questions.",
+      "Test your English skills through interactive quizzes, exercises, and real-life communication scenarios.",
   },
 
-  
   {
-    icon: <FaTrophy className="text-[#d49c5b] text-2xl" />,
+    icon: <FaUniversity className="text-[#d49c5b] text-2xl" />,
     title: "Top University Insights",
     description:
-      "Explore top universities and prepare for global education opportunities.",
+      "Get valuable insights about top-ranked universities, admission preparation, and global study opportunities.",
   },
-  
-
-  
-
-
-
-
 ];
 const WhyJoinQuizPlatform = () => {
   return (
