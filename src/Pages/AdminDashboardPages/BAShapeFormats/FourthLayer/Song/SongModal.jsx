@@ -32,7 +32,7 @@ const SongModal = ({ isOpen, onClose, fieldName, currentValue, vocabId }) => {
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/fourth-layer/goodSongField/${vocabId}`,
+        `https://api.betheshape.com/fourth-layer/goodSongField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

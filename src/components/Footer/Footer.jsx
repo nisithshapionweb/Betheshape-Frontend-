@@ -34,7 +34,7 @@ const Footer = () => {
   const fetchSocialLinks = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/admin/social-links"
+        "https://api.betheshape.com/api/admin/social-links"
       );
       setSocialLinks(data || {});
     } catch (err) {

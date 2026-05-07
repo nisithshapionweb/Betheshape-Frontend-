@@ -28,7 +28,7 @@ const AdminBlankPdfUpload = () => {
   const { data: pdfs = [], isLoading } = useQuery({
     queryKey: ["pdfs"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/pdf/blank");
+      const res = await fetch("https://api.betheshape.com/pdf/blank");
       return res.json();
     },
   });
@@ -37,7 +37,7 @@ const AdminBlankPdfUpload = () => {
   const uploadMutation = useMutation({
     mutationFn: async (formData) => {
       setUploading(true);
-      const res = await fetch("http://localhost:5000/pdf/blank/upload", {
+      const res = await fetch("https://api.betheshape.com/pdf/blank/upload", {
         method: "POST",
         body: formData,
       });
@@ -70,7 +70,7 @@ const AdminBlankPdfUpload = () => {
   /* ---------------- DELETE MUTATION ---------------- */
   const deleteMutation = useMutation({
     mutationFn: async (id) => {
-      const res = await fetch(`http://localhost:5000/pdf/blank/${id}`, {
+      const res = await fetch(`https://api.betheshape.com/pdf/blank/${id}`, {
         method: "DELETE",
       });
       return res.json();

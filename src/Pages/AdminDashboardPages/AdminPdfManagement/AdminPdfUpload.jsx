@@ -58,7 +58,7 @@ const AdminPdfUpload = () => {
   const { data: pdfs = [], isLoading } = useQuery({
     queryKey: ["pdfs"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/pdf");
+      const res = await fetch("https://api.betheshape.com/pdf");
       return res.json();
     },
   });
@@ -67,7 +67,7 @@ const AdminPdfUpload = () => {
   const { data: savedPaymentMethods, refetch: refetchPaymentMethods } = useQuery({
     queryKey: ["paymentMethods"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/pdf/payment-methods");
+      const res = await fetch("https://api.betheshape.com/pdf/payment-methods");
       const data = await res.json();
       if (res.ok && data) {
         setPaymentMethods(data);
@@ -80,7 +80,7 @@ const AdminPdfUpload = () => {
   const uploadMutation = useMutation({
     mutationFn: async (formData) => {
       setUploading(true);
-      const res = await fetch("http://localhost:5000/pdf/upload", {
+      const res = await fetch("https://api.betheshape.com/pdf/upload", {
         method: "POST",
         body: formData,
       });
@@ -117,7 +117,7 @@ const AdminPdfUpload = () => {
   /* ---------------- DELETE MUTATION ---------------- */
   const deleteMutation = useMutation({
     mutationFn: async (id) => {
-      const res = await fetch(`http://localhost:5000/pdf/${id}`, {
+      const res = await fetch(`https://api.betheshape.com/pdf/${id}`, {
         method: "DELETE",
       });
       return res.json();
@@ -132,7 +132,7 @@ const AdminPdfUpload = () => {
   const savePaymentMethodsMutation = useMutation({
     mutationFn: async (methods) => {
       setSavingPayment(true);
-      const res = await fetch("http://localhost:5000/pdf/payment-methods", {
+      const res = await fetch("https://api.betheshape.com/pdf/payment-methods", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(methods),

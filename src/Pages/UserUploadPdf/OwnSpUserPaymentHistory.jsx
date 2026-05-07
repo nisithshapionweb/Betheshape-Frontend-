@@ -6,7 +6,7 @@ import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
 const fetchUserPayments = async (email) => {
-  const res = await axios.get(`http://localhost:5000/own-sp-payment/user/${email}`);
+  const res = await axios.get(`https://api.betheshape.com/own-sp-payment/user/${email}`);
 
   return res.data;
 };

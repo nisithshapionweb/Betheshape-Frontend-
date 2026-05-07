@@ -24,7 +24,7 @@ export default function AdminDashboard() {
   const [topCollections, setTopCollections] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const base = "http://localhost:5000/api/dashboard";
+  const base = "https://api.betheshape.com/api/dashboard";
 
   const fetchAll = async () => {
     try {

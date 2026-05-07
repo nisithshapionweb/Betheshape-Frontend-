@@ -8,7 +8,7 @@ const HomePageLeftSide = () => {
   useEffect(() => {
     const fetchPromotions = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/promotions");
+        const { data } = await axios.get("https://api.betheshape.com/api/promotions");
         // শুধু left side এর জন্য filter
         setPromotions(data.filter((p) => p.position === "middle"));
       } catch (error) {

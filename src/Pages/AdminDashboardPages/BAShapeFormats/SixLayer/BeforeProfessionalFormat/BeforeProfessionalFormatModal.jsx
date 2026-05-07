@@ -32,7 +32,7 @@ const BeforeProfessionalFormatModal = ({ isOpen, onClose, fieldName, currentValu
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/six-layer/beforeProfessionalField/${vocabId}`,
+        `https://api.betheshape.com/six-layer/beforeProfessionalField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

@@ -32,7 +32,7 @@ const PoremModal = ({ isOpen, onClose, fieldName, currentValue, vocabId }) => {
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/fourth-layer/goodPoremField/${vocabId}`,
+        `https://api.betheshape.com/fourth-layer/goodPoremField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

@@ -162,7 +162,7 @@ const AdminPromotion = () => {
       };
 
       await axios.post(
-        "http://localhost:5000/api/promotions",
+        "https://api.betheshape.com/api/promotions",
         promotionData,
       );
 
@@ -202,7 +202,7 @@ const AdminPromotion = () => {
     setFetchLoading(true);
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/promotions",
+        "https://api.betheshape.com/api/promotions",
       );
       setPromotions(response.data);
     } catch (error) {
@@ -231,7 +231,7 @@ const AdminPromotion = () => {
     if (result.isConfirmed) {
       setDeletingId(id);
       try {
-        await axios.delete(`http://localhost:5000/api/promotions/${id}`);
+        await axios.delete(`https://api.betheshape.com/api/promotions/${id}`);
         setPromotions(promotions.filter((promo) => promo._id !== id));
         Swal.fire("Deleted!", "Promotion has been deleted.", "success");
       } catch (error) {

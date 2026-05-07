@@ -37,7 +37,7 @@ const AdminSpBooks = () => {
   const { data: pdfs = [], isLoading } = useQuery({
     queryKey: ["pdfs"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/own-sp");
+      const res = await fetch("https://api.betheshape.com/own-sp");
       return res.json();
     },
   });
@@ -48,7 +48,7 @@ const AdminSpBooks = () => {
   const uploadMutation = useMutation({
     mutationFn: async (formData) => {
       setUploading(true);
-      const res = await fetch("http://localhost:5000/own-sp/upload", {
+      const res = await fetch("https://api.betheshape.com/own-sp/upload", {
         method: "POST",
         body: formData,
       });
@@ -85,7 +85,7 @@ const AdminSpBooks = () => {
   /* ---------------- DELETE MUTATION ---------------- */
   const deleteMutation = useMutation({
     mutationFn: async (id) => {
-      const res = await fetch(`http://localhost:5000/own-sp/${id}`, {
+      const res = await fetch(`https://api.betheshape.com/own-sp/${id}`, {
         method: "DELETE",
       });
       return res.json();

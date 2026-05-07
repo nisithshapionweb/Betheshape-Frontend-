@@ -19,7 +19,7 @@ import useAuth from "../../../hooks/useAuth";
 import useRole from "../../../hooks/useRole";
 
 const fetchPayments = async () => {
-  const res = await axios.get("http://localhost:5000/own-sp-payment/admin");
+  const res = await axios.get("https://api.betheshape.com/own-sp-payment/admin");
   return res.data;
 };
 
@@ -58,7 +58,7 @@ const OwnSpAllUserPayment = () => {
     if (!confirm.isConfirmed) return;
 
     try {
-      await axios.patch(`http://localhost:5000/own-sp-payment/status/${id}`, {
+      await axios.patch(`https://api.betheshape.com/own-sp-payment/status/${id}`, {
         status,
       });
       Swal.fire(
@@ -87,7 +87,7 @@ const OwnSpAllUserPayment = () => {
     if (!confirm.isConfirmed) return;
 
     try {
-      await axios.delete(`http://localhost:5000/own-sp-payment/admin/${id}`);
+      await axios.delete(`https://api.betheshape.com/own-sp-payment/admin/${id}`);
       Swal.fire("Deleted!", "Payment has been deleted.", "success");
       queryClient.invalidateQueries(["allPayments"]);
     } catch {

@@ -18,7 +18,7 @@ const Blog = () => {
       setLoading(true);
       setError(null);
 
-      const res = await axios.get(`http://localhost:5000/blog/blog`, {
+      const res = await axios.get(`https://api.betheshape.com/blog/blog`, {
         withCredentials: true,
       });
     

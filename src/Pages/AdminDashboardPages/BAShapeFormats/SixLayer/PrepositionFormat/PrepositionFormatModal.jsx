@@ -32,7 +32,7 @@ const PrepositionFormatModal = ({ isOpen, onClose, fieldName, currentValue, voca
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/six-layer/prepositionField/${vocabId}`,
+        `https://api.betheshape.com/six-layer/prepositionField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

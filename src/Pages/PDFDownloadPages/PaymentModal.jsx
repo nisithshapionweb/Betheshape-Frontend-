@@ -105,7 +105,7 @@ const PaymentModal = ({ pdf, paymentMethods, user, onClose, onPaymentSuccess }) 
 
 
       // API call
-      const res = await fetch("http://localhost:5000/pdf/purchase", {
+      const res = await fetch("https://api.betheshape.com/pdf/purchase", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

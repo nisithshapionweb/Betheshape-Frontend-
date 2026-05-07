@@ -32,7 +32,7 @@ const DevelopYourSkillsModal = ({ isOpen, onClose, fieldName, currentValue, voca
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/third-layer/developSkillsField/${vocabId}`,
+        `https://api.betheshape.com/third-layer/developSkillsField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

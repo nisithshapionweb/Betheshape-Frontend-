@@ -33,7 +33,7 @@ const BlankFormat = () => {
   };
 
   const handleDownload = (id) => {
-    window.location.href = `http://localhost:5000/pdf/blank/download/${id}`;
+    window.location.href = `https://api.betheshape.com/pdf/blank/download/${id}`;
   };
 
   if (isLoading) return <CustomLoading />;

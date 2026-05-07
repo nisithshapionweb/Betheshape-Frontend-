@@ -33,7 +33,7 @@ const IdeaShareAnsSuggestionFormatModal = ({ isOpen, onClose, fieldName, current
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/six-layer/ideaSharesField/${vocabId}`,
+        `https://api.betheshape.com/six-layer/ideaSharesField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

@@ -35,7 +35,7 @@ const ElegantModal = ({
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/first-layer/elegantField/${vocabId}`,
+        `https://api.betheshape.com/first-layer/elegantField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

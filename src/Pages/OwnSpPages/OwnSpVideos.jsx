@@ -37,7 +37,7 @@ const OwnSpVideos = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await fetch("http://localhost:5000/own-sp/videos");
+        const res = await fetch("https://api.betheshape.com/own-sp/videos");
         const data = await res.json();
 
         if (res.ok) {

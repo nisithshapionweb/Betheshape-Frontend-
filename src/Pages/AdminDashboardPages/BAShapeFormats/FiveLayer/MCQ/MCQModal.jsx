@@ -36,7 +36,7 @@ const MCQModal = ({
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/five-layer/mcqField/${vocabId}`,
+        `https://api.betheshape.com/five-layer/mcqField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

@@ -32,7 +32,7 @@ const AdminSocialLinks = () => {
     const fetchLinks = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/admin/social-links"
+          "https://api.betheshape.com/api/admin/social-links"
         );
         setLinks(data);
       } catch (error) {
@@ -69,7 +69,7 @@ const AdminSocialLinks = () => {
 
       try {
         const { data } = await axios.put(
-          "http://localhost:5000/api/admin/social-links",
+          "https://api.betheshape.com/api/admin/social-links",
           { platform, url: "" } // Backend handles delete
         );
 
@@ -105,7 +105,7 @@ const AdminSocialLinks = () => {
     // 🔹 Normal update
     try {
       const { data } = await axios.put(
-        "http://localhost:5000/api/admin/social-links",
+        "https://api.betheshape.com/api/admin/social-links",
         { platform, url: tempUrl }
       );
 

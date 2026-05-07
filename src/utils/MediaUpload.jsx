@@ -51,7 +51,7 @@
 
 //     if (media?.public_id) {
 //       try {
-//         await axios.post(`http://localhost:5000/delete-media/${type}`, {
+//         await axios.post(`https://api.betheshape.com/delete-media/${type}`, {
 //           publicId: media.public_id,
 //         });
 //       } catch (error) {
@@ -257,7 +257,7 @@ const MediaUpload = ({
 
     if (media?.public_id) {
       try {
-        await axios.post(`http://localhost:5000/delete-media/${type}`, {
+        await axios.post(`https://api.betheshape.com/delete-media/${type}`, {
           publicId: media.public_id,
         });
       } catch (error) {

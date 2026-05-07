@@ -31,7 +31,7 @@ const AdminSpVideo = () => {
   const { data: videos = [], isLoading } = useQuery({
     queryKey: ["videos"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/own-sp/videos");
+      const res = await fetch("https://api.betheshape.com/own-sp/videos");
       return res.json();
     },
   });
@@ -40,7 +40,7 @@ const AdminSpVideo = () => {
   const uploadMutation = useMutation({
     mutationFn: async (data) => {
       setUploading(true);
-      const res = await fetch("http://localhost:5000/own-sp/videos", {
+      const res = await fetch("https://api.betheshape.com/own-sp/videos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -66,7 +66,7 @@ const AdminSpVideo = () => {
   /* ---------------- DELETE ---------------- */
   const deleteMutation = useMutation({
     mutationFn: async (id) => {
-      const res = await fetch(`http://localhost:5000/own-sp/videos/${id}`, {
+      const res = await fetch(`https://api.betheshape.com/own-sp/videos/${id}`, {
         method: "DELETE",
       });
       return res.json();

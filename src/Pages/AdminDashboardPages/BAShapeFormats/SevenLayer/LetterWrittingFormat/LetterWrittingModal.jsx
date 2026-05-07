@@ -36,7 +36,7 @@ const LetterWrittingFormatModal = ({
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/seven-layer/letterWritingField/${vocabId}`,
+        `https://api.betheshape.com/seven-layer/letterWritingField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

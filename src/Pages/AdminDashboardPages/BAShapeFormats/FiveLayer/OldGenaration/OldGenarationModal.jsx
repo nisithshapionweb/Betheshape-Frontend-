@@ -36,7 +36,7 @@ const OldGenarationModal = ({
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/five-layer/oldGenerationField/${vocabId}`,
+        `https://api.betheshape.com/five-layer/oldGenerationField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

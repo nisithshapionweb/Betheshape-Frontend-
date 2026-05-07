@@ -48,7 +48,7 @@ const UserUploadPdf = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/pdf/user?email=${user.email}`,
+        `https://api.betheshape.com/pdf/user?email=${user.email}`,
       );
 
       if (!res.ok) throw new Error("Failed to fetch PDFs");
@@ -107,7 +107,7 @@ const UserUploadPdf = () => {
         formData.append("PdfThumbnil", formValues.PdfThumbnil);
       }
 
-      const res = await fetch("http://localhost:5000/pdf/user/upload", {
+      const res = await fetch("https://api.betheshape.com/pdf/user/upload", {
         method: "POST",
         body: formData,
       });
@@ -153,7 +153,7 @@ const UserUploadPdf = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`http://localhost:5000/pdf/user/${id}`, {
+          const res = await fetch(`https://api.betheshape.com/pdf/user/${id}`, {
             method: "DELETE",
           });
 

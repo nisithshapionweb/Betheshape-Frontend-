@@ -30,7 +30,7 @@ const BlogDetails = () => {
   const fetchBlog = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:5000/blog/blog/${id}`);
+      const res = await axios.get(`https://api.betheshape.com/blog/blog/${id}`);
       setBlog(res?.data?.data || res?.data || null);
       setError("");
     } catch (err) {

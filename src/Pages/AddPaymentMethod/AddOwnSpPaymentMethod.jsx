@@ -11,7 +11,7 @@ const paymentOptions = {
 };
 
 const fetchPaymentMethods = async () => {
-  const res = await axios.get("http://localhost:5000/own-sp-payment");
+  const res = await axios.get("https://api.betheshape.com/own-sp-payment");
   return res.data;
 };
 
@@ -64,7 +64,7 @@ const AddOwnSpPaymentMethod = () => {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:5000/own-sp-payment", {
+      await axios.post("https://api.betheshape.com/own-sp-payment", {
         ...data,
         methodCategory: category,
       });
@@ -104,7 +104,7 @@ const AddOwnSpPaymentMethod = () => {
     if (!result.isConfirmed) return;
 
     try {
-      await axios.delete(`http://localhost:5000/own-sp-payment/${id}`);
+      await axios.delete(`https://api.betheshape.com/own-sp-payment/${id}`);
       queryClient.invalidateQueries(["paymentMethods"]);
       Swal.fire({
         icon: "success",

@@ -5,7 +5,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 const fetchPayments = async () => {
-  const res = await axios.get("http://localhost:5000/pdf/payments");
+  const res = await axios.get("https://api.betheshape.com/pdf/payments");
   return res.data;
 };
 
@@ -36,7 +36,7 @@ const AdminPdfPayment = () => {
 
       setProcessingId(id);
 
-      const response = await axios.patch(`http://localhost:5000/pdf/payments/${id}`, {
+      const response = await axios.patch(`https://api.betheshape.com/pdf/payments/${id}`, {
         status: status
       });
 
@@ -85,7 +85,7 @@ const AdminPdfPayment = () => {
 
       setDeletingId(id);
 
-      const response = await axios.delete(`http://localhost:5000/pdf/payments/${id}`);
+      const response = await axios.delete(`https://api.betheshape.com/pdf/payments/${id}`);
 
      
 

@@ -17,7 +17,7 @@ const OwnSpBooks = () => {
   const fetchBooks = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/own-sp");
+      const res = await fetch("https://api.betheshape.com/own-sp");
       const data = await res.json();
       if (res.ok) setBooks(data);
     } catch (err) {
@@ -143,7 +143,7 @@ const OwnSpBooks = () => {
                     <button
                       onClick={() =>
                         window.open(
-                          `http://localhost:5000/own-sp/download/${book._id}`,
+                          `https://api.betheshape.com/own-sp/download/${book._id}`,
                           "_blank",
                         )
                       }

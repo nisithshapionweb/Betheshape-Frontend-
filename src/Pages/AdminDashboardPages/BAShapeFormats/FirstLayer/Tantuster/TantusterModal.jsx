@@ -36,7 +36,7 @@ const TantusterModal = ({
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/first-layer/tantusterField/${vocabId}`,
+        `https://api.betheshape.com/first-layer/tantusterField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

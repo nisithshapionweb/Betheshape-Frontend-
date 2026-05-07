@@ -44,7 +44,7 @@ const OwnSpPaymentMethod = () => {
   } = useQuery({
     queryKey: ["paymentMethods"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:5000/own-sp-payment");
+      const res = await axios.get("https://api.betheshape.com/own-sp-payment");
       const methods = {};
       res.data.forEach((item) => {
         if (

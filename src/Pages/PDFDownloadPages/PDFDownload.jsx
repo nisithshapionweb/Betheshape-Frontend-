@@ -41,7 +41,7 @@ const PDFDownload = () => {
 
   const fetchPaymentMethods = async () => {
     try {
-      const res = await fetch("http://localhost:5000/pdf/payment-methods");
+      const res = await fetch("https://api.betheshape.com/pdf/payment-methods");
       const data = await res.json();
       if (res.ok) setPaymentMethods(data);
     } catch (err) {
@@ -54,7 +54,7 @@ const PDFDownload = () => {
     try {
       // ক্যাশ বাইপাস
       const res = await fetch(
-        `http://localhost:5000/pdf/free?${getCacheBuster()}`,
+        `https://api.betheshape.com/pdf/free?${getCacheBuster()}`,
       );
       const data = await res.json();
       if (res.ok) setFreePdfs(data);
@@ -73,7 +73,7 @@ const PDFDownload = () => {
         try {
           if (showLoading) setLoading(true);
           const res = await fetch(
-            `http://localhost:5000/pdf/paid?${getCacheBuster()}`,
+            `https://api.betheshape.com/pdf/paid?${getCacheBuster()}`,
           );
           const data = await res.json();
           if (res.ok) {
@@ -96,7 +96,7 @@ const PDFDownload = () => {
 
         // ক্যাশ বাইপাস সহ API কল
         const res = await fetch(
-          `http://localhost:5000/pdf/paid?email=${user.email}&${getCacheBuster()}`,
+          `https://api.betheshape.com/pdf/paid?email=${user.email}&${getCacheBuster()}`,
         );
 
         const data = await res.json();
@@ -184,7 +184,7 @@ const PDFDownload = () => {
 
   // const handleDownload = async (id, filename, type, price) => {
   //   if (type === "free") {
-  //     window.open(`http://localhost:5000/pdf/download/${id}`, "_blank");
+  //     window.open(`https://api.betheshape.com/pdf/download/${id}`, "_blank");
   //     return;
   //   }
 
@@ -205,20 +205,20 @@ const PDFDownload = () => {
 
   //   // চেক করুন ইতিমধ্যে কেনা আছে কিনা
   //   if (purchasedPdfs.includes(id)) {
-  //     window.open(`http://localhost:5000/pdf/download/${id}?email=${user.email}`, "_blank");
+  //     window.open(`https://api.betheshape.com/pdf/download/${id}?email=${user.email}`, "_blank");
   //     return;
   //   }
 
   //   // ডাউনলোডের আগে রিয়েল-টাইম চেক
   //   try {
   //     const checkRes = await fetch(
-  //       `http://localhost:5000/pdf/access?pdfId=${id}&email=${user.email}&${getCacheBuster()}`
+  //       `https://api.betheshape.com/pdf/access?pdfId=${id}&email=${user.email}&${getCacheBuster()}`
   //     );
   //     const checkData = await checkRes.json();
 
   //     if (checkData.hasAccess) {
   //       // এক্সেস থাকলে ডাউনলোড করুন এবং স্টেট আপডেট করুন
-  //       window.open(`http://localhost:5000/pdf/download/${id}?email=${user.email}`, "_blank");
+  //       window.open(`https://api.betheshape.com/pdf/download/${id}?email=${user.email}`, "_blank");
 
   //       // স্টেট আপডেট
   //       setPurchasedPdfs((prev) => [...prev, id]);
@@ -246,7 +246,7 @@ const PDFDownload = () => {
     try {
       // ফ্রি PDF - সরাসরি ডাউনলোড
       if (type === "free") {
-        window.open(`http://localhost:5000/pdf/download/${id}`, "_blank");
+        window.open(`https://api.betheshape.com/pdf/download/${id}`, "_blank");
         return;
       }
 
@@ -270,7 +270,7 @@ const PDFDownload = () => {
       if (purchasedPdfs.includes(id)) {
         // কেনা থাকলে সরাসরি ডাউনলোড করান
         window.open(
-          `http://localhost:5000/pdf/download/${id}?email=${user.email}`,
+          `https://api.betheshape.com/pdf/download/${id}?email=${user.email}`,
           "_blank",
         );
         return;
@@ -279,14 +279,14 @@ const PDFDownload = () => {
       // ডাউনলোডের আগে আবার এক্সেস চেক করুন (রিয়েল-টাইম)
       try {
         const checkRes = await fetch(
-          `http://localhost:5000/pdf/access?pdfId=${id}&email=${user.email}`,
+          `https://api.betheshape.com/pdf/access?pdfId=${id}&email=${user.email}`,
         );
         const checkData = await checkRes.json();
 
         if (checkData.hasAccess) {
           // এক্সেস থাকলে ডাউনলোড করুন এবং স্টেট আপডেট করুন
           window.open(
-            `http://localhost:5000/pdf/download/${id}?email=${user.email}`,
+            `https://api.betheshape.com/pdf/download/${id}?email=${user.email}`,
             "_blank",
           );
 

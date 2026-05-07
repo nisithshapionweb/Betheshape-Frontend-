@@ -38,7 +38,7 @@ const Promotion = ({ position }) => {
     const fetchAd = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/promotions"
+          "https://api.betheshape.com/api/promotions"
         );
 
         const now = new Date();

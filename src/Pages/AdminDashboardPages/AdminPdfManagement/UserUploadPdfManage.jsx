@@ -19,7 +19,7 @@ const UserUploadPdfManage = () => {
   const fetchPdfs = async () => {
     setLoadingHistory(true);
     try {
-      const res = await fetch("http://localhost:5000/pdf/user");
+      const res = await fetch("https://api.betheshape.com/pdf/user");
       const data = await res.json();
       if (res.ok) setPdfs(data);
     } catch (err) {
@@ -44,7 +44,7 @@ const UserUploadPdfManage = () => {
       confirmButtonColor: "#d33",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const res = await fetch(`http://localhost:5000/pdf/user/${id}`, {
+        const res = await fetch(`https://api.betheshape.com/pdf/user/${id}`, {
           method: "DELETE",
         });
 
@@ -61,7 +61,7 @@ const UserUploadPdfManage = () => {
   // status update
   const handleStatusUpdate = async (id, status) => {
     const res = await fetch(
-      `http://localhost:5000/pdf/user/status/${id}`,
+      `https://api.betheshape.com/pdf/user/status/${id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -81,7 +81,7 @@ const UserUploadPdfManage = () => {
   const handleDownload = async (pdf) => {
 
     const res = await fetch(
-      `http://localhost:5000/pdf/user/download/${pdf._id}`
+      `https://api.betheshape.com/pdf/user/download/${pdf._id}`
     );
 
     const blob = await res.blob();

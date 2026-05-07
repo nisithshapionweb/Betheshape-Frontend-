@@ -30,7 +30,7 @@
 //   const mutation = useMutation({
 //     mutationFn: async (newValue) => {
 //       const res = await fetch(
-//         `http://localhost:5000/fourth-layer/goodNobelField/${vocabId}`,
+//         `https://api.betheshape.com/fourth-layer/goodNobelField/${vocabId}`,
 //         {
 //           method: "PUT",
 //           headers: { "Content-Type": "application/json" },
@@ -154,7 +154,7 @@ const UserNobelModal = ({
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/fourth-layer/goodNobelField/${vocabId}`,
+        `https://api.betheshape.com/fourth-layer/goodNobelField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

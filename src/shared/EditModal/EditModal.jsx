@@ -18,7 +18,7 @@
 //   const mutation = useMutation({
 //     mutationFn: async (newValue) => {
 //       const res = await fetch(
-//         `http://localhost:5000/first-layer/VocabularyField/${vocabId}`,
+//         `https://api.betheshape.com/first-layer/VocabularyField/${vocabId}`,
 //         {
 //           method: "PUT",
 //           headers: { "Content-Type": "application/json" },
@@ -129,7 +129,7 @@ const EditModal = ({ isOpen, onClose, fieldName, currentValue, vocabId }) => {
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-        `http://localhost:5000/first-layer/VocabularyField/${vocabId}`,
+        `https://api.betheshape.com/first-layer/VocabularyField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

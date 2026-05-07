@@ -33,7 +33,7 @@ const AdminTravelingModal = ({ isOpen, onClose, fieldName, currentValue, vocabId
   const mutation = useMutation({
     mutationFn: async (newValue) => {
       const res = await fetch(
-         `http://localhost:5000/fourth-layer/travelingField/${vocabId}`,
+         `https://api.betheshape.com/fourth-layer/travelingField/${vocabId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
