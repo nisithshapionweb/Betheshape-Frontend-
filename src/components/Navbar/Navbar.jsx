@@ -76,8 +76,9 @@ const getNavigationLinks = (user, setLanguage, field = [], isLoading) => {
     {
       title: "Explore",
       subLinks: [
-        { title: "Other", link: "explore/other" },
+        { title: "Ai Info", link: "explore/other" },
         { title: "For Next", link: "/explore/for-next" },
+        { title: "Other", link: "explore/others" },
       ],
     },
     {
@@ -86,7 +87,6 @@ const getNavigationLinks = (user, setLanguage, field = [], isLoading) => {
         { title: "Books", link: "own-sp/books" },
         { title: "Video", link: "own-sp/video" },
         { title: "Other", link: "own-sp/other" },
-        
       ],
     },
     { title: "Blog", link: "/blog-us" },

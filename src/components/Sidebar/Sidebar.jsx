@@ -1663,7 +1663,7 @@ const Sidebar = ({ isSidebarOpen, handleSidebarToggle }) => {
         {
           path: "/admin-dashboard/create-a-new-other",
           icon: BiEdit,
-          label: "Create Other",
+          label: "Create Ai Other",
           description: "Create & History",
           color: "text-indigo-600",
         },
@@ -1671,6 +1671,13 @@ const Sidebar = ({ isSidebarOpen, handleSidebarToggle }) => {
           path: "/admin-dashboard/create-a-for-next",
           icon: BiEdit,
           label: "Create For Next",
+          description: "Create & History",
+          color: "text-indigo-600",
+        },
+         {
+          path: "/admin-dashboard/create-explore-other",
+          icon: BiEdit,
+          label: "Create Other",
           description: "Create & History",
           color: "text-indigo-600",
         },

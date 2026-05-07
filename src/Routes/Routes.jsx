@@ -126,6 +126,7 @@ import InterviewsQustionsExcersice from "../Pages/AdminDashboardPages/BAShapeFor
 import AdminGoodLifeStyle from "../Pages/AdminDashboardPages/BAShapeFormats/ThirdLayer/GoodLifeStyle/AdminGoodLifeStyle";
 import IdeaShareAnsSuggestion from "../Pages/AdminDashboardPages/BAShapeFormats/ThirdLayer/IdeaShareAnsSuggestion/IdeaShareAnsSuggestion";
 import InterviewsQustions from "../Pages/AdminDashboardPages/BAShapeFormats/ThirdLayer/InterviewsQustion/InterviewsQustions";
+import AdminExploreOtherPages from "../Pages/AdminDashboardPages/OtherPages/AdminExploreOtherPages";
 import AdminForNextPages from "../Pages/AdminDashboardPages/OtherPages/AdminForNextPages";
 import AdminOtherPages from "../Pages/AdminDashboardPages/OtherPages/AdminOtherPages";
 import AdminSpBooks from "../Pages/AdminDashboardPages/OwnSpPages/AdminSpBooks";
@@ -135,6 +136,7 @@ import BlankFormat from "../Pages/ContributePages/BlankFormat/BlankFormat";
 import UploadPDF from "../Pages/ContributePages/UploadPDF/UploadPDF";
 import UserAcceptsNobel from "../Pages/ContributePages/UserNobel/UserAcceptsNobel";
 import DashboardRedirect from "../Pages/DashboardRedirect";
+import AiOther from "../Pages/OtherPagesUi/AiOther";
 import ForNext from "../Pages/OtherPagesUi/ForNext";
 import Other from "../Pages/OtherPagesUi/Other";
 import OwnSpBooks from "../Pages/OwnSpPages/OwnSpBooks";
@@ -401,6 +403,14 @@ export const routes = createBrowserRouter([
         element: (
           <Suspense fallback={<LoadingSpinner />}>
             <ForNext />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/explore/others",
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <AiOther />
           </Suspense>
         ),
       },
@@ -1469,6 +1479,14 @@ export const routes = createBrowserRouter([
         element: (
           <Suspense fallback={<LoadingSpinner />}>
             <AdminOtherPages />
+          </Suspense>
+        ),
+      },
+      {
+        path: "create-explore-other",
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <AdminExploreOtherPages />
           </Suspense>
         ),
       },
