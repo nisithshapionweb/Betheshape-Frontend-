@@ -1,17 +1,18 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {
-    FaFacebook,
-    FaInstagram,
-    FaLinkedin,
-    FaPhoneAlt,
-    FaTiktok,
-    FaTwitter,
-    FaWhatsapp,
-    FaYoutube,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaTiktok,
+  FaTwitter,
+  FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
+import footerLogo from "../../assets/footer-share.jpeg";
 import imageLogo from "../../assets/logo.png";
 
 const Footer = () => {
@@ -66,20 +67,48 @@ const Footer = () => {
       <div className="max-w-[1400px] mx-auto px-2 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
         
         {/* Logo & Contact */}
-        <div>
-          <img src={imageLogo} alt="Logo" className="h-16 w-24 mb-2" />
-          <p className="mb-4 font-bold uppercase text-base">Office Address</p>
+       {/* Logo & Contact */}
+<div>
+  {/* Main Footer Logo */}
+  <div className="flex items-center gap-3 mb-4">
+    <img
+      src={footerLogo}
+      alt="Footer Logo"
+      className="h-16 w-24 rounded-xl shadow-md object-cover border border-white/40"
+    />
 
-          <p className="flex items-center gap-2 mb-1">
-            <FaPhoneAlt /> 01XXXXXXXX
-          </p>
-          <p className="flex items-center gap-2 mb-1">
-            <MdEmail /> info@betheshape.com
-          </p>
-          <p className="flex items-center gap-2">
-            <MdLocationOn /> House 15, road 11, Uttara sector 3
-          </p>
-        </div>
+    {/* Small Betheshape Logo */}
+    <img
+      src={imageLogo}
+      alt="Betheshape Logo"
+      className="h-12 w-12 rounded-full shadow-lg border-2 border-[#d49c5b] object-cover"
+    />
+  </div>
+
+  {/* Website Related Text */}
+  <p className="text-gray-700 leading-7 text-[15px] mb-5 max-w-md">
+   Be the shape is a family wings of magnanimous notion  / Be the Shape is a child of magnanimous notion.
+  </p>
+
+  <p className="mb-4 font-bold uppercase text-base tracking-wide text-[#d49c5b]">
+    Office Address
+  </p>
+
+  <p className="flex items-center gap-2 mb-2 text-gray-700">
+    <FaPhoneAlt className="text-[#d49c5b]" />
+    01XXXXXXXX
+  </p>
+
+  <p className="flex items-center gap-2 mb-2 text-gray-700">
+    <MdEmail className="text-[#d49c5b]" />
+    info@betheshape.com
+  </p>
+
+  <p className="flex items-center gap-2 text-gray-700">
+    <MdLocationOn className="text-[#d49c5b]" />
+    House 15, Road 11, Uttara Sector 3
+  </p>
+</div>
 
         {/* Useful Links */}
         <div className="text-base">

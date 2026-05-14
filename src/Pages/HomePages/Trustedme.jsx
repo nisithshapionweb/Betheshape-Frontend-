@@ -5,6 +5,7 @@ import {
   FaGlobeAsia,
   FaLayerGroup,
   FaQuestionCircle,
+  FaRocket,
   FaTasks,
   FaUniversity,
   FaUserTie
@@ -72,6 +73,12 @@ const features = [
     title: "Top University Insights",
     description:
       "Get valuable insights about top-ranked universities, admission preparation, and global study opportunities.",
+  },
+    {
+    icon: <FaRocket className="text-[#d49c5b] text-2xl" />,
+    title: "And Many More Features",
+    description:
+      "And a lot more features are revealed when you explore the website properly with deep observation. Hopefully, it will give you a great shape for your future path.",
   },
 ];
 const WhyJoinQuizPlatform = () => {
