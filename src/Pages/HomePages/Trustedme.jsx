@@ -99,15 +99,15 @@ const WhyJoinQuizPlatform = () => {
               proficiency. At the same time, we are trying to build a space that
               reflects a passionate lifestyle, positivity, and a logical thought
               process.
-              <br /><br />
+              <br />
               It is a thoughtful blend of modern trends and nostalgic values,
               combined with a continuous learning journey that feels meaningful
               and personal.
-              <br /><br />
+              <br />
               Hopefully, this platform will support mental growth in an abstract
               way and help even during moments of absence of mind, bringing a
               sense of clarity and direction.
-              <br /><br />
+              <br />
               So, if you feel the need for a little guidance to organize your
               thoughts, shape your mindset, and build a strong direction for your
               career path and lifestyle — Be The Shape will always try to connect
